@@ -34,10 +34,10 @@
         "sale",
     ],
     "data": [
-        "views/sale/report_saleorder_bisnes.xml",
-        "views/sale/report_saleorder_bisnes_document.xml",
-        "views/external_layout/external_layout_header_power.xml",
-        "views/external_layout/external_layout_footer_power.xml",
+        "views/sale/report_saleorder_bisnesmart.xml",
+        "views/sale/report_saleorder_bisnesmart_document.xml",
+        "views/external_layout/external_layout_header_bisnesmart.xml",
+        "views/external_layout/external_layout_footer_bisnesmart.xml",
 
     ],    
     "installable": True,
