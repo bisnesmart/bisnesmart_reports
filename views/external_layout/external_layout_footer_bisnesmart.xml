@@ -2,8 +2,8 @@
 <openerp>
 <data>
 <!-- Esta vista sobreescribe la vista del foooter que utilizan los informes de Odoo para meter la
-personalizada para powerworks con el fondo rojo y la fuente blanca -->
-<template id="report_footer_power" inherit_id="report.external_layout_footer"> 
+personalizada para bisnesmart con el fondo rojo y la fuente blanca -->
+<template id="report_footer_bisnesmart" inherit_id="report.external_layout_footer"> 
             <xpath expr="//div[@class='footer']" position="replace">
                 <div class ="footer">
                 	 <div class="footer" style="background:#A24689; color:#FFFFFF;"> 

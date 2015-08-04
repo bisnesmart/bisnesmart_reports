@@ -6,7 +6,7 @@
         id="report_saleorder_bisnesmart"
         model="sale.order"
         string="Quotation/Order full"
-        name="bisnesmart_reports.report_saleorder_bisnesmartfull"
+        name="bisnesmart_reports.report_saleorder_bisnesmart_full"
         report_type="qweb-pdf" />
 
 <template id="report_saleorder_bisnesmart_full"> 

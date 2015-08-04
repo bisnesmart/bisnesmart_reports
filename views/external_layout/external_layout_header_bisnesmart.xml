@@ -2,8 +2,8 @@
 <openerp>
 <data>
 <!-- Esta vista sobreescribe la vista de header que utilizan los informes de Odoo para meter la
-personalizada para powerworks sin lineas y con el logo grande -->
-<template id="report_header_power" inherit_id="report.external_layout_header"> 
+personalizada para bisnesmart sin lineas y con el logo grande -->
+<template id="report_header_bisnesmart" inherit_id="report.external_layout_header"> 
             <xpath expr="//div[@class='header']" position="replace">
                 <div class ="header">
          <div class="row">
