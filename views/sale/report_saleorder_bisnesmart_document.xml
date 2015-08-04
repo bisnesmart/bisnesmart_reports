@@ -142,6 +142,7 @@
           <thead>
             <tr class="border-black">
                  <th class="text-right">BASE</th>
+                 <th class="text-right">%IRPF</th>
                  <th class="text-right">%IVA</th>
                  <th class="text-right">IVA</th>
                  <th class="text-right">TOTAL</th>
@@ -153,8 +154,11 @@
              <td class="text-right">
                 <span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.pricelist_id.currency_id&quot;}"/>
              </td>
+              <td class="text-right">
+                <span>15%</span>
+             </td>
              <td class="text-right">
-                <span t-field="o.amount_tax" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.pricelist_id.currency_id&quot;}"/>
+                <span>21%</span>
              </td>
              
              <td class="text-right">
