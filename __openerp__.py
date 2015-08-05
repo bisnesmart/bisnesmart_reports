@@ -36,6 +36,8 @@
     "data": [
         "views/sale/report_saleorder_bisnesmart.xml",
         "views/sale/report_saleorder_bisnesmart_document.xml",
+        "views/account/report_invoice_bisnesmart.xml",
+        "views/account/report_invoice_bisnesmart_document.xml",
         "views/external_layout/external_layout_header_bisnesmart.xml",
         "views/external_layout/external_layout_footer_bisnesmart.xml",
 

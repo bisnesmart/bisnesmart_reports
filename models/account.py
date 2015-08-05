@@ -16,7 +16,8 @@
 #
 ##############################################################################
 
-from . import sale
-from . import account
+from openerp import models, fields, api
 
 
+class report_invoice(models.Model):
+	_inherit = "account.invoice"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+        <report
+        id="report_invoice_bisnesmart"
+        model="account.invoice"
+        string="Invoice BisneSmart"
+        name="bisnesmart_reports.report_invoice_bisnesmart_full"
+        report_type="qweb-pdf" />
+
+<template id="report_invoice_bisnesmart_full">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'bisnesmart_reports.report_invoice_bisnesmart_document')"/>
+        </t>
+    </t>
+
+ </template>
+</data>
+</openerp>
+
