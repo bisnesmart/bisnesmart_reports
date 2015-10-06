@@ -173,8 +173,9 @@
     </table>
     </div>
         </div>
-    </t>
     </xpath>
+    </t>
+
     </template>
 </data>
 </openerp>
