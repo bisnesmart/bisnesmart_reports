@@ -4,6 +4,7 @@
 
 
 <template id="report_saleorder_bisnesmart_document">
+  <xpath expr="//div[@class= 'page']" position="replace"> 
   <t t-call="report.external_layout">
   
     <div class="page">
@@ -108,10 +109,10 @@
         <thead>
           <tr>
             <th>Descripción Articulo</th>
-            <th class="text-right">Quantity</th>
-            <th class="text-right">Unit Price</th>
-            <th groups="sale.group_discount_per_so_line">Disc.(%)</th>
-            <th class="text-right">Price</th>
+            <th class="text-right">Cantidad</th>
+            <th class="text-right">Precio Unitario</th>
+            <th groups="sale.group_discount_per_so_line">Desc.(%)</th>
+            <th class="text-right">Precio</th>
           </tr>
         </thead>
         <tbody class="sale_tbody">
@@ -137,12 +138,11 @@
       </table>
       
       
-      <div class="table table-condensed row mt128">
+      <div class="table table-condensed row mt32">
           <table  class="table table-condensed">
           <thead>
             <tr class="border-black">
                  <th class="text-right">BASE</th>
-                 <th class="text-right">%IRPF</th>
                  <th class="text-right">%IVA</th>
                  <th class="text-right">IVA</th>
                  <th class="text-right">TOTAL</th>
@@ -153,9 +153,6 @@
             <tr>
              <td class="text-right">
                 <span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.pricelist_id.currency_id&quot;}"/>
-             </td>
-              <td class="text-right">
-                <span>15%</span>
              </td>
              <td class="text-right">
                 <span>21%</span>
@@ -176,7 +173,7 @@
         <table class="table table-condensed" >
         <tr class="border-black">
         <p t-if="o.payment_term.note">
-        <strong>Payment Term:</strong>
+        <strong>Metodo de pago:</strong>
         <span t-field="o.payment_term.note"/>
       </p>
     </tr>
@@ -202,7 +199,7 @@
     </div>
   </t>
 
-
+    </xpath>
     </template>
 </data>
 </openerp>
