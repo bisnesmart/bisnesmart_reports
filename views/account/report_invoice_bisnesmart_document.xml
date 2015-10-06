@@ -4,12 +4,13 @@
 
 <template id="report_invoice_bisnesmart_document">
     <t t-call="report.external_layout">
+        <xpath expr="//div[@class= 'page']" position="replace"> 
         <div class="page">
             <div class="row">
         <div class="col-xs-3" style="background:#A24689">
             <h2 style="font-weight: bold; font-style:italic; margin-top:0; margin-bottom:0; color:#FFFFFF;">
 
-                <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Invoice</span>
+                <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura</span>
                 <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
                 <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
                 <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
@@ -51,15 +52,15 @@
           </table>
             <div class="row mt32 mb32">
                 <div class="col-xs-4" >
-                    <strong>Factura Nª:</strong>
+                    <strong>Factura Nº:</strong>
                     <span t-field="o.number"/>
                 </div>
                 <div class="col-xs-4" t-if="o.date_invoice">
-                    <strong>Invoice Date:</strong>
+                    <strong>Fecha Factura:</strong>
                     <p t-field="o.date_invoice"/>
                 </div>
                 <div class="col-xs-4" t-if="o.origin">
-                    <strong>Source:</strong>
+                    <strong>Origen:</strong>
                     <p t-field="o.origin"/>
                 </div>
             </div>
@@ -71,12 +72,12 @@
             <table class="table table-condensed mt32 mb128">
                 <thead>
                     <tr>
-                        <th>Description</th>
-                        <th>Quantity</th>
-                        <th class="text-right">Unit Price</th>
-                        <th class="text-right" groups="sale.group_discount_per_so_line">Discount (%)</th>
-                        <th class="text-right">Taxes</th>
-                        <th class="text-right">Amount</th>
+                        <th>Descripci´on</th>
+                        <th>Cantidad</th>
+                        <th class="text-right">Precio Unidad</th>
+                        <th class="text-right" groups="sale.group_discount_per_so_line">Descuento (%)</th>
+                        <th class="text-right">Impuestos</th>
+                        <th class="text-right">Importe</th>
                     </tr>
                 </thead>
                 <tbody class="invoice_tbody">
@@ -111,9 +112,9 @@
                     <table class="table table-condensed">
                         <thead>
                             <tr>
-                                <th>Tax</th>
+                                <th>Impuestos</th>
                                 <th class="text-right">Base</th>
-                                <th class="text-right">Amount</th>
+                                <th class="text-right">Total</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -133,13 +134,13 @@
             <div class="col-xs-4 pull-right">
                     <table class="table table-condensed">
                         <tr class="border-black">
-                            <td><strong>Total Without Taxes</strong></td>
+                            <td><strong>Total Sin Impuestos</strong></td>
                             <td class="text-right">
                                 <span t-field="o.amount_untaxed" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
                             </td>
                         </tr>
                         <tr>
-                            <td>Taxes</td>
+                            <td>Impuestos</td>
                             <td class="text-right">
                                 <span t-field="o.amount_tax" t-field-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: &quot;o.currency_id&quot;}"/>
                             </td>
@@ -157,15 +158,15 @@
         <table class="table table-condensed" >
         <tr class="border-black">
             <p t-if="o.comment">
-                <strong>Comment:</strong>
+                <strong>Comentarios:</strong>
                 <span t-field="o.comment"/>
             </p>
             <p t-if="o.payment_term.note">
-                <strong>Payment Term:</strong>
+                <strong>Metodo de pago:</strong>
                 <span t-field="o.payment_term.note"/>
             </p>
             <p t-if="o.fiscal_position.note">
-                <strong>Fiscal Position Remark:</strong>
+                <strong>Posicion fiscal:</strong>
                 <span t-field="o.fiscal_position.note"/>
             </p>
           </tr>
@@ -173,6 +174,7 @@
     </div>
         </div>
     </t>
+    </xpath>
     </template>
 </data>
 </openerp>
