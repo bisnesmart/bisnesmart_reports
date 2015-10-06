@@ -169,7 +169,7 @@
             </tbody>
           </table>
           
-    <div class="col-xs-3 col-xs-push mt32 mb32" style="background:#D8D8D8;">
+    <div class="col-xs-3 col-xs-push mt32 mb32" style="background:#D8D8D8;" id="informations">
         <table class="table table-condensed" >
         <tr class="border-black">
         <p t-if="o.payment_term.note">
