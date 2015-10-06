@@ -3,7 +3,7 @@
 <data>
 
 
-<template id="report_saleorder_bisnesmart_document">
+<template id="report_saleorder_bisnesmart_document" inherit_id="sale.report_saleorder_document">
   <xpath expr="//div[@class= 'page']" position="replace"> 
   <t t-call="report.external_layout">
   
